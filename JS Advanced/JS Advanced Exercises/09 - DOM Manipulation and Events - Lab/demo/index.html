@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<h1>It's Demo Bitch!</h1>
+<button>1</button>
+<button>1</button>
+<button>1</button>
+<button>1</button>
+<button>1</button>
+<button>1</button>
+<script>
+   const btn = document.querySelector("button")
+
+   document.querySelectorAll('button').forEach(b => {
+      b.addEventListener("mouseover", increment)
+      b.addEventListener("click", decrement)
+
+   })
+
+   var counter = {
+      value: 0,
+      increment() {
+         this.value++
+         btn.textContent = this.value
+      }
+   }
+
+   function increment(event) {
+      const newValue = Number(event.target.textContent) + 1
+      event.target.textContent = newValue
+      console.log(event);
+      //       alert('hey')
+      //       window.location = 'https://sportal.bg/';
+      // 
+   }
+   function decrement(event) {
+      const newValue = Number(event.target.textContent) - 1
+      event.target.textContent = newValue
+      console.log(event);
+
+   }
+   // if(Number(document.querySelectorAll("button")[0].value) === Number(4)){
+   //     alert("Bravo")
+   //     console.log("bravo");
+   // }
+
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

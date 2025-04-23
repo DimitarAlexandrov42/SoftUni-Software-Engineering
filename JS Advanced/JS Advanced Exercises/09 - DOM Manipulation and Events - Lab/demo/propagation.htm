@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <article>
+            <button>Click Me! 1</button>
+            <button>Click Me! 2</button>
+            <button>Click Me! 3</button>
+            <button>Click Me! 4</button>
+            <button>Click Me! 5</button>
+            <button>Click Me! 6</button>
+            <p>Content here</p>
+        </article>
+
+    </div>
+
+    <script>
+        const btn = document.querySelector('button')
+
+        btn.addEventListener('click', onClick,true)
+        btn.parentElement.addEventListener('click', onClick,true)
+        btn.parentElement.parentElement.addEventListener('click', onClick,true)
+
+        // document.querySelector('article').addEventListener('click', onClick)
+
+        function onClick(ev) {
+            // console.log('clicked', this);
+            console.log('clicked', ev.currentTarget);
+        console.log(ev.target);
+            // if(ev.target.tagName === "BUTTON"){
+            //     console.log('clicked', this);
+            // }else{
+            //     console.log('you didnt clicked on the right place!');
+            // }
+        }
+    </script>
+</body>
+
+</html>

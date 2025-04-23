@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, $insert name here$!</title>
+
+</head>
+ 
+<body>
+    <h1>Hello, %insert name here%!</h1>
+    <button onclick="search()">Edit Element</button>
+    <ul>
+        <script>
+            function edit(ref, match, replacer) {
+                // const pattern = new RegExp(match,'g')
+                const text = ref.textContent
+                const result = text.split(match).join(replacer)
+
+                ref.textContent = result
+            }
+
+        </script>
+    </ul>
+</body>
+
+</html>
