@@ -1,0 +1,17 @@
+{
+  "name": "03.-company-administration",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "companyAdministration.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0"
+  }
+}
